@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --pink-color: #E9AD99;
+    --blue-color: #728690;
+    --background-color: rgb(245, 236, 236);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* menu */
+
+header nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+header nav div.menu-toggle {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+header nav div.menu-toggle div {
+    width: 30px;
+    height: 5px;
+    background-color: var(--blue-color);
+    margin-top: 3px;
+}
+
+header nav div.menu-toggle div:first-child {
+    margin-top: 0;
+}
+
+header nav ul {
+    background-color: var(--pink-color);
+    width: 0px;
+    height: 100vh;
+    overflow: hidden;
+    transition: width .5s;
+}
+
+header nav ul.open {
+    background-color: var(--pink-color);
+    width: 250px;
+    height: 100vh;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li div.one, header nav ul li div.two {
+    width: 5px;
+    height: 25px;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+header nav ul li div.one {
+    transform: skewX(30deg);
+}
+
+header nav ul li div.two {
+    transform: skewX(-30deg);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
